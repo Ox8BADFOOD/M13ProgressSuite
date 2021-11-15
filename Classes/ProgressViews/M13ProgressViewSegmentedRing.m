@@ -147,7 +147,8 @@
 - (void)setSecondaryColor:(UIColor *)secondaryColor
 {
     [super setSecondaryColor:secondaryColor];
-    _backgroundLayer.strokeColor = self.secondaryColor.CGColor;
+    _backgroundLayer.strokeColor = [[UIColor clearColor] CGColor];
+    _backgroundLayer.fillColor = self.secondaryColor.CGColor;
     [self setNeedsDisplay];
 }
 
